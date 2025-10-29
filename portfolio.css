@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #00343d;
+}
+.hero{
+    background-image: url('images/Chendo\ Precious\ \(2\).jpg');
+    width: 97.5%;
+    height: 95vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 13px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.social-icons{
+    display: flex;
+    gap: 20px;
+    position: relative;
+    top: 17rem;
+    left: 58px;
+    font-size: 19px;
+}
+.social-icons .circle{
+    width: 40px; /* Adjusted to match the size of the icons */
+    height: 37px; /* Adjusted to match the size of the icons */
+    background-color: transparent;
+    border: 0.5px solid rgba(255, 255, 255, 0.142);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.git, .insta, .linkd, .mail{
+    color: white;
+    background-color: transparent;
+    opacity: 0.9;
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.nav{
+    position: absolute;
+    top:485px;
+    left: 51%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, rgba(6,10,14,0.6), rgba(8,12,18,0.45));
+    backdrop-filter: blur(6px);
+    padding: 5px 12px;
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    z-index: 50;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin:0;
+    padding:1px 4px;
+}
+.nav a{
+    display: inline-block;
+    color: #e6eef2;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: all .22s ease;
+    transform: translateZ(0);
+}
+.nav a:hover{
+    color: #ffffff;
+    transform: translateY(-3px);
+
+}
+.nav a.active{
+    background: linear-gradient(90deg, #f2ff63 0%, #d7f02a 100%);
+    color: #07121a;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    padding: 10px 35px;
+}
+.service-head{
+    display: flex;
+    gap: 6px;
+    position: relative;
+    top: 60px;
+    margin-left: 40px;
+    background-color: rgba(255, 255, 255, 0.806);
+    border-radius: 20px;
+    width: 110px;
+    height: 40px;
+    padding: 10px 20px;
+}
+.service-head a.sparkle{
+    color: #00343d;
+    font-size: 17px;
+    text-decoration: none;
+}
+.service-head p{
+    color: #00343d;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: poppins, sans-serif;
+    font-style:unset;
+}
