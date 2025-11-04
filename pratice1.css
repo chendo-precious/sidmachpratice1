@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url('images/backgroundimage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
+    z-index: -1;
+    pointer-events: none;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+}
+main .logo{
+    width: 35%;
+    height: 70vh;
+    object-fit: cover;
+    margin-top: 1cm;
+}
+.form-view{
+    display: flex;
+    align-items: center;/* Semi-transparent white background */
+    padding: 20px;
+}
+h1 a{
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blue;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+    margin-top: 5px;
+}
+form{
+    display: flex;
+    gap: 1cm;
+    margin-top: 3cm;
+}
+.form-group1{
+    display: flex;
+    flex-direction: column; /* Semi-transparent white background */
+}
+.form-group2{
+    display: flex;
+    flex-direction: column; /* Semi-transparent white background */
+}
+form label{
+    font-size: 1.2rem;
+    margin-top: 15px;
+    font-size: 15px;
+}
+form input{
+    width: 210px;
+    height: 29px;
+    border: 1px solid gray;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 15px;
+    background-color: rgb(216, 212, 212);
+}
+form input:focus {
+    outline: none;
+    border-color: #888;
+    font-size: 12px;
+}
+form ::placeholder{
+    font-size: 12px;
+}
+form button{
+    margin-top: 3em;
+    width: 3.5cm;
+    height: 29px;
+    background-color: blue;
+    border: 1px solid rgb(13, 13, 82) ;
+}
