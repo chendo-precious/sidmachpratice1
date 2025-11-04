@@ -218,110 +218,118 @@ body{
 }
 .center-img img{
     position: relative;
-    top: 20px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     width: 97.5%;
     height: 630px;
     border-radius: 15px;
 }
+/* Fluid helpers and overrides to keep layout visually identical across widths */
+:root{
+    --side-margin: clamp(12px, 2.5vw, 30px);
+    --hero-max: min(1200px, 97.5vw);
+}
+
+/* Make hero fluid and centered */
+.hero{
+    width: var(--hero-max);
+    margin: 13px auto;
+    height: clamp(60vh, 85vh, 95vh);
+}
+
+/* Positioning uses clamps instead of fixed rem/cm so it scales */
+.social-icons{
+    top: clamp(9rem, 22vh, 17rem);
+    left: clamp(16px, 4vw, 58px);
+    gap: clamp(8px, 1.6vw, 20px);
+    font-size: clamp(14px, 1.6vw, 19px);
+}
+
+.nav{
+    left: 50%;
+    transform: translateX(-50%);
+    top: clamp(38vh, 45vh, 48.5vh);
+    padding: clamp(4px, 0.8vw, 12px);
+    width: auto;
+}
+
+/* Make the text block wrap and scale smoothly */
+.write-up{
+    gap: clamp(24px, 10vw, 320px);
+    margin-left: var(--side-margin);
+    top: clamp(30px, 12vh, 110px);
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.write-up h1{
+    font-size: clamp(28px, 4.6vw, 49px);
+}
+.write-up p{
+    font-size: clamp(12px, 1.8vw, 14.5px);
+}
+
+/* Images scale and stack naturally */
+.images{
+    gap: clamp(10px, 3vw, 22px);
+    margin-left: var(--side-margin);
+    top: clamp(50px, 18vh, 130px);
+    display: flex;
+    flex-wrap: wrap;
+}
+.images .first{
+    width: min(650px, 95%);
+    height: auto;
+}
+.images2{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 1.5vw, 10px);
+    flex: 1 1 320px;
+}
+.images2 img{
+    width: min(450px, 95%);
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Navigation arrows and center image responsiveness */
+.navigation-arrows{
+    margin-top: clamp(30px, 18vh, 180px);
+    margin-right: 0; /* remove huge cm offsets on narrow devices */
+    justify-content: center;
+}
+.center-img img{
+    width: min(97.5%, 1200px);
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    top: clamp(10px, 3vh, 20px);
+}
+
+/* Breakpoints refine stacking while preserving look */
 @media screen and (max-width: 1024px) {
-    .hero {
-        width: 95%;
-        height: 90vh;
-    }
-
-    .write-up {
-        gap: 160px;
-    }
-
-    .images {
-        flex-direction: column;
-    }
-
-    .images .first {
-        width: 95%;
-        height: auto;
-    }
-
-    .images2 img {
-        width: 95%;
-        height: auto;
-    }
-
-    .navigation-arrows {
-        margin-right: 0;
-        margin-top: 100px;
-    }
+    .write-up { gap: clamp(16px, 8vw, 160px); }
+    .navigation-arrows { margin-top: clamp(24px, 14vh, 100px); }
 }
 
-/* For mobile devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
-    .hero {
-        width: 92%;
-        height: 80vh;
-        margin: 10px;
-    }
-
-    .social-icons {
-        top: 12rem;
-        left: 30px;
-    }
-
-    .nav {
-        width: 90%;
-        left: 50%;
-        top: 420px;
-    }
-
-    .nav ul {
-        gap: 10px;
-    }
-
-    .nav a {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-
-    .write-up {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .write-up h1 {
-        font-size: 32px;
-    }
-
-    .center-img img {
-        width: 92%;
-        height: auto;
-    }
+    .hero { width: 92%; height: clamp(50vh, 70vh, 80vh); margin: 10px auto; }
+    .social-icons { top: clamp(6rem, 18vh, 12rem); left: clamp(16px, 6vw, 30px); }
+    .nav { top: clamp(34vh, 40vh, 42vh); width: 92%; }
+    .nav ul { gap: 10px; }
+    .nav a { padding: 8px 12px; font-size: 14px; }
+    .write-up { flex-direction: column; gap: clamp(12px, 6vw, 30px); margin-left: var(--side-margin); }
+    .write-up h1 { font-size: clamp(22px, 6vw, 32px); }
+    .center-img img { width: 92%; height: auto; }
+    .images { flex-direction: column; gap: 12px; }
 }
 
-/* For small mobile devices (max-width: 480px) */
 @media screen and (max-width: 480px) {
-    .nav {
-        padding: 3px 8px;
-    }
-
-    .nav ul {
-        gap: 5px;
-    }
-
-    .nav a {
-        padding: 6px 10px;
-        font-size: 12px;
-    }
-
-    .service-head {
-        margin-left: 15px;
-    }
-
-    .write-up {
-        margin-left: 15px;
-    }
-
-    .images {
-        margin-left: 15px;
-    }
+    .nav { padding: 3px 8px; }
+    .nav ul { gap: 6px; }
+    .nav a { padding: 6px 10px; font-size: 12px; }
+    .service-head, .write-up, .images { margin-left: 15px; }
+    .social-icons { left: 12px; top: 8rem; font-size: 14px; }
 }
