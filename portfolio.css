@@ -216,7 +216,7 @@ body{
     height: 1px;
     background-color: rgba(255, 255, 255, 0.5);
 }
-.center-img{
+#center-img{
     background: url(images/IDEA\ MEETS\ CREATIVITY\ \(1\).jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -396,6 +396,47 @@ a.search, a.prototype, a.design{
     margin-right: 9px;
     initial-letter-align: inherit;
 }
-.clients-post{
-
+.client-post{
+    background: url(images/Blue\ Gradient\ Technology\ Zoom\ Virtual\ Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 430px;
+    width: 100%;
+    height: 590px;
+}
+.contact-spark{
+    display: flex;
+    gap: 8px;
+    position: relative;
+    top: 100px;
+    left: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 160px;
+    height: 40px;
+    padding: 10px 20px;
+}
+.contact-spark > a.spark3{
+    color: #1a2a4e;
+    font-size: 18px;
+    line-height: 1;
+    text-decoration: none;
+}
+.contact-spark > p{
+    color: #1a2a4e;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    font-family:"Norwester", Arial,sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    top: 130px;
+    margin-left: 30px;
+    width: 400px;
 }
