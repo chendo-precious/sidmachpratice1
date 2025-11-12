@@ -870,7 +870,7 @@ footer{
     }
 }
 
-/* Mobile (480px to 600px) */
+/* Mobile (400px to 600px) */
 @media (max-width: 600px) {
     .hero {
         width: 95%;
@@ -1086,7 +1086,7 @@ footer{
     }
 }
 
-/* Extra Small Mobile (below 480px) */
+/* Extra Small Mobile (400px to 480px) */
 @media (max-width: 480px) {
     .hero {
         width: 94%;
@@ -1294,5 +1294,216 @@ footer{
         width: 100px;
         height: 28px;
         font-size: 10px;
+    }
+}
+
+/* Ultra Small Mobile (below 400px) */
+@media (max-width: 400px) {
+    .hero {
+        width: 93%;
+        height: 50vh;
+        margin: 5px;
+    }
+
+    .social-icons {
+        top: 7rem;
+        left: 12px;
+        gap: 6px;
+        font-size: 13px;
+    }
+
+    .social-icons .circle {
+        width: 28px;
+        height: 26px;
+    }
+
+    .git, .insta, .linkd, .mail {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav {
+        top: 270px;
+        padding: 2px 3px;
+    }
+
+    .nav ul {
+        gap: 5px;
+    }
+
+    .nav a {
+        padding: 4px 6px;
+        font-size: 9px;
+    }
+
+    .nav a.active {
+        padding: 4px 12px;
+    }
+
+    .service-head {
+        top: 40px;
+        margin-left: 8px;
+        width: 75px;
+        height: 30px;
+    }
+
+    .service-head p {
+        font-size: 11px;
+    }
+
+    .write-up {
+        gap: 8px;
+        top: 55px;
+        margin-left: 8px;
+    }
+
+    .write-up h1 {
+        font-size: 20px;
+    }
+
+    .write-up p {
+        font-size: 9px;
+    }
+
+    .images {
+        gap: 6px;
+        top: 65px;
+        margin-left: 8px;
+    }
+
+    .images .first {
+        width: 100%;
+        max-width: 250px;
+        height: 200px;
+    }
+
+    .images2 img {
+        width: 100%;
+        max-width: 250px;
+        height: 90px;
+    }
+
+    .images h1 {
+        font-size: 18px;
+    }
+
+    .images p {
+        font-size: 10px;
+    }
+
+    .navigation-arrows {
+        margin-top: 70px;
+        margin-right: 0.5cm;
+    }
+
+    .navigation-arrows .arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .navigation-arrows .line {
+        width: 35px;
+        height: 0.5px;
+    }
+
+    .center-img {
+        height: 180px;
+        margin-top: 8px;
+    }
+
+    .center-icon {
+        top: 25px;
+        left: 8px;
+        width: 120px;
+        height: 30px;
+    }
+
+    .center-icon > p {
+        font-size: 10px;
+    }
+
+    .work-spark {
+        top: 55px;
+        margin-left: 8px;
+        width: 110px;
+        height: 30px;
+    }
+
+    .work-spark > p {
+        font-size: 11px;
+    }
+
+    .work-descrip {
+        gap: 6px;
+        top: 70px;
+        margin-left: 8px;
+    }
+
+    .work-descrip h1 {
+        font-size: 20px;
+    }
+
+    article {
+        font-size: 9px;
+    }
+
+    .work-icons {
+        gap: 20px;
+        top: 120px;
+        margin-left: 8px;
+    }
+
+    .work-icons h1 {
+        font-size: 15px;
+        padding-top: 18px;
+    }
+
+    .work-icons a {
+        font-size: 16px;
+    }
+
+    a.search, a.prototype, a.design {
+        padding: 14px 14px;
+    }
+
+    .contact-spark {
+        top: 40px;
+        left: 8px;
+        width: 120px;
+        height: 30px;
+    }
+
+    .contact-spark > p {
+        font-size: 11px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin-left: 8px;
+        margin-top: 65px;
+        padding: 12px 15px;
+        gap: 3px;
+    }
+
+    form label {
+        font-size: 10px;
+        padding-top: 8px;
+    }
+
+    form input, form textarea {
+        font-size: 9px;
+        padding: 3px;
+    }
+
+    form button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8px;
+        width: 90px;
+        height: 26px;
+        font-size: 9px;
     }
 }
